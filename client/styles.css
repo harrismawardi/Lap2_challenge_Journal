@@ -5,12 +5,13 @@
 
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
 
     /* Flexbox stuff */
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0%;
     
     /* Text styles */
     text-align: center;
@@ -19,7 +20,7 @@
     /* Background styles */
     background-image: url(https://wallpapercave.com/wp/wp2450313.jpg);
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -31,3 +32,12 @@
     margin-top: 0;
     margin-bottom: 0.5em;
 }
+
+@media (min-width: 320px) { 
+
+.hero::before { 
+    background-image: url(/img/background-1932466_1920-460x305.jpg); 
+    } 
+} 
+    
+    @media (min-width: 460px) { .hero::before { background-image: url(/img/background-1932466_1920-720x477.jpg); } } @media (min-width: 720px) { .hero::before { background-image: url(/img/background-1932466_1920-980x649.jpg); } } @media (min-width: 980px) { .hero::before { background-image: url(/img/background-1932466_1920-1240x821.jpg); } } @media (min-width: 1240px) { .hero::before { background-image: url(/img/background-1932466_1920-1500x993.jpg); } } @media (min-width: 1500px) { .hero::before { background-image: url(/img/background-1932466_1920-1760x1166.jpg); } } @media (min-width: 1760px) { .hero::before { background-image: url(/img/background-1932466_1920-1920x1271.jpg); } } 
