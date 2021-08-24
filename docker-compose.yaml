@@ -3,15 +3,27 @@ services:
   api:
     image: node:12.18.4
     working_dir: /code
+    ports:
+      - '3000:3000'
     volumes: 
-        - type: bind
-          source: ./api
-          target: /code
-  
+      - type: bind
+        source: ./api
+        target: /code
+    command: bash -c "npm install && npm start"
+    depends_on:
+      - db
+
   db: 
     image: postgres:12.4
+    ports:
+      - 5432:5432
     environment: 
-      - POSTGRES_USER=futureproof
+      - POSTGRES_USER=simonharris
+      - POSTGRES_DB=journal
+      - POSTGRES_PASSWORD=journalpass
     volumes:
       - "./db/migrations:/docker-entrypoint-initdb.d/:ro"
+  
+volumes:
+  dbdata:
 
