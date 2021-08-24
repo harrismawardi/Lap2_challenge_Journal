@@ -11,11 +11,11 @@ class Post {
     static get all() {
         return new Promise (async (resolve, reject) => {
             try {
-                const postsData = await db.run(`SELECT * FROM posts;`)
+                const postsData = await db.query(`SELECT * FROM posts;`)
                 const posts = postsData.rows.map(d => new Post(d))
                 resolve(posts);
             } catch (err) {
-                reject("Error retrieving posts")
+                reject('Error retrieving posts')
             }
         })
     }
@@ -23,7 +23,7 @@ class Post {
     static findById (id) {
         return new Promise (async (resolve, reject) => {
             try {
-                let postData = await db.run(`SELECT * FROM posts WHERE id = ${id};`);
+                let postData = await db.query(`SELECT * FROM posts WHERE id = ${id};`);
                 let post = new Post(postData.rows[0]);
                 resolve (post);
             } catch (err) {
@@ -35,7 +35,7 @@ class Post {
     static create(id, title, author_name, story){
         return new Promise (async (resolve, reject) => {
             try {
-                let postData = await db.run(`INSERT INTO posts (title, author_name, story) VALUES (${title}, ${author_name}, ${story}) RETURNING *;`);
+                let postData = await db.query(`INSERT INTO posts (title, author_name, story) VALUES (${title}, ${author_name}, ${story}) RETURNING *;`);
                 let newPost = new Post(postData.rows[0]);                
                 resolve (newPost);
             } catch (err) {
