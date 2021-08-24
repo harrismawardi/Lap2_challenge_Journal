@@ -1,5 +1,32 @@
-body {
-    background-image: url("https://static.wixstatic.com/media/b34289_0b00d544f6504279b491b36616f2efe5~mv2_d_2040_1360_s_2.jpg/v1/fill/w_1000,h_667,al_c,q_90,usm_0.66_1.00_0.01/b34289_0b00d544f6504279b491b36616f2efe5~mv2_d_2040_1360_s_2.jpg");
-    background-repeat: no-repeat;
+.hero {
+    /* Sizing */
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center
+
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Text styles */
+    text-align: center;
+
+    /* Background styles */
+    background-image: url(https://codetheweb.blog/assets/img/posts/full-image-hero/image.jpg);
     background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero h1 {
+    /* Text styles */
+    font-size: 5em;
+
+    margin-top: 0;
+    margin-bottom: 0.5em;
 }
