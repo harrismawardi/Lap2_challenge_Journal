@@ -1,4 +1,4 @@
-const db = require ('../dbConfig/insert dir here')
+const db = require ('../dbConfig/init')
 
 class Post {
     constructor(data){
