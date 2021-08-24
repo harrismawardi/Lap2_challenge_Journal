@@ -49,10 +49,10 @@ class Post {
     //         return new Promise (async (resolve, reject) => {
     //             try {
     //                 let updatedPostData = await db.query(`UPDATE posts SET story WHERE id = $1`, [ this.id ]);
-    //                 let updatedPost = new Dog(updatedPostData.rows[0]);
+    //                 let updatedPost = new Post (updatedPostData.rows[0]);
     //                 resolve (updatedPost);
     //             } catch (err) {
-    //                 reject('Error updating dog');
+    //                 reject('Error updating post');
     //             }
     //         });
     //     }
