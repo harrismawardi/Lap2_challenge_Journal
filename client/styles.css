@@ -45,7 +45,7 @@ body {
 .hero h2 {
     /* Text styles */
     font-size: 2em;
-    text-shadow: 2px 2px 10px #920518;
+    text-shadow: 2px 2px 10px #000000;
 
     margin-top: 0;
     margin-bottom: 0.5em;
