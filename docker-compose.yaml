@@ -15,7 +15,7 @@ services:
       - type: bind
         source: ./api
         target: /code
-    command: bash -c "npm install && npm start"
+    command: bash -c "npm install && npm run seedDev && npm start"
     depends_on:
       - db
 
@@ -24,10 +24,11 @@ services:
     ports:
       - 5432:5432
     environment: 
-      - POSTGRES_USER=simonharris
-      - POSTGRES_DB=journal
-      - POSTGRES_PASSWORD=journalpass
+      - POSTGRES_USER=journal-app
+      - POSTGRES_DB=journal-app-db
+      - POSTGRES_PASSWORD=journal-app-pass
     volumes:
+      - "dbdata:/var/lib/postgresql/data"
       - "./db/migrations:/docker-entrypoint-initdb.d/:ro"
   
 volumes:
