@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+
+body { font-family: 'Quicksand', sans-serif; }
+
+.hero {
+    /* Sizing */
+    width: 100vw;
+    height: 100vh;
+
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0%;
+    
+    /* Text styles */
+    text-align: center;
+    color: white;
+
+    /* Background styles */
+    background-image: url(https://wallpapercave.com/wp/wp2450313.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero h1 {
+    /* Text styles */
+    font-size: 5em;
+
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+#text {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+#title {
+    font-family: 'Lucida Grande',Arial,sans-serif;
+    font-weight: 10;
+    font-style: normal;
+    font-size: 32px;
+    margin: 21px 21px 12px;
+    line-height: 34px;
+}
+
+#author_name {
+    font-family: 'Lucida Grande' ,Arial, sans-serif;
+    font-size: 15px;
+    line-height: 18px;
+    color: #79828B;
+    margin: 12px 21px;
+    font-style: normal;
+}
+
+#story {
+    font-family: 'Lucida Grande','Times New Roman',serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.58;
+    padding: 0;
+    margin-left: 32px;
+    color: rgba(0,0,0,.8);
+}
+
+#publish {
+    font-family: CustomSansSerif, 'Lucida Grande', Arial, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 17px;
+    color: #000;
+    text-decoration: none;
+    border: 2px solid #333;
+    border-radius: 16px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    margin: 0 0 15px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
