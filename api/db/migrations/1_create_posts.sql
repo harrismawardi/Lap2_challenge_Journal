@@ -1,8 +1,8 @@
-DROP TABLE IF EXISTS entries;
+DROP TABLE IF EXISTS posts;
 
-CREATE TABLE entries (
-    entry_id serial PRIMARY KEY,
-    author VARCHAR,
+CREATE TABLE posts (
+    id serial PRIMARY KEY,
+    author_name VARCHAR,
     title VARCHAR,
-    body VARCHAR
+    story VARCHAR
 );
