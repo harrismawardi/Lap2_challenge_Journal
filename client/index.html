@@ -14,22 +14,38 @@
     <section class="hero">
         <div class="hero-text">
             <h1>Scream Into The Void!</h1>
-            <h2><i>(you know you want to)</i></h2>
-            <div class="content">        
-                <form id="new-post-form">
-                    <div id="text">           
-                        <input id="title" type="text" placeholder="Title"/><br>
-                        
-                        <input id="author_name" type="text" placeholder="Your name" /><br>
-        
-                        <input id="story" type="text" placeholder="Your story" />
+            <h2><i>(You know you want to)</i></h2>
+            <div class="container">
+                <form action="/action_page.php">
+                <div class="row">
+                  <div class="col-25">
+                    <label for="author_name">Name</label>
+                  </div>
+                  <div class="col-75">
+                    <input type="text" id="author_name" name="author_name" placeholder="Your name (this can be anything)">
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                      <label for="fname">Title</label>
                     </div>
-
-                    <input id="publish" type="submit" value="Publish">
-
+                    <div class="col-75">
+                      <input type="text" id="title" name="title" placeholder="Title">
+                    </div>
+                  </div>
+                <div class="row">
+                  <div class="col-25">
+                    <label for="story">Your Story</label>
+                  </div>
+                  <div class="col-75">
+                    <textarea id="story" name="story" placeholder="Now scream..." style="height:200px"></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <input type="submit" value="Submit">
+                </div>
                 </form>
-            </div>
-        </div>
+              </div>
     </section>
 
     <main>
